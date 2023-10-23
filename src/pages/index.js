@@ -6,7 +6,7 @@ import TypingAnimation from "@/components/TypingAnimation";
 
 const inter = Inter({ subsets: ["latin"] });
 
-console.log(process.env.NEXT_PUBLIC_OPENAI_API_KEY);
+
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
