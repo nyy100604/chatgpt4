@@ -6,7 +6,7 @@ import TypingAnimation from "@/components/TypingAnimation";
 
 const inter = Inter({ subsets: ["latin"] });
 
-console.log(process.env.OPENAI_API_KEY);
+console.log(process.env.NEXT_PUBLIC_OPENAI_API_KEY);
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
@@ -26,10 +26,6 @@ export default function Home() {
 
   const sendMessage = (message) => {
     const url = "/api/chat";
-    const headers = {
-      "Content-type": "application/json",
-      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-    };
     const data = {
       model: "gpt-4",
       messages: [{ role: "user", content: message }],
